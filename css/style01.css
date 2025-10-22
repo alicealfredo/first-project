@@ -1,0 +1,7 @@
+a:link{
+    color:blue; 
+}
+
+fieldset{ /*muda a largura da margem limitada do campo para 30% do tamanho da página*/
+    width: 30%
+}
