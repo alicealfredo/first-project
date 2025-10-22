@@ -8,17 +8,28 @@ com a contagem).
 """
 
 def analisadorTexto(text):
-    letras = 0
     palavras = text.split()
-    palavraLonga = 0
-    for i in range(0,len(text)):
-        if text[i] in text:
-            letras += 1
-        for i in range(0,len(palavras)):
-            if palavraLonga < palavras[i]:
-                palavraLonga = palavras[i]
-                  
-    return palavraLonga
+    palavraLonga = palavras[0]
+    palavraCurta = palavras[0]
+    letrasIguais = 0
+
+    for palavra in palavras:
+        if len(palavra) > len(palavras):
+            palavraLonga = palavra  
+        elif len(palavra) < len(palavras):
+            palavraCurta = palavra
+    
+        if palavra[0] == palavra[-1]:
+            letrasIguais += 1
+            print(palavra)
+    
+    print(f"Palavra mais longa: {palavraLonga}")
+    print(f"Palavra mais curta: {palavraCurta}")
+    print(f"Palavras que começam e terminam com a mesma letra: {letrasIguais}")
+
+
+
 text = str(input("Digite um parágrafo: "))
-print(analisadorTexto(text))
+analisadorTexto(text)
+
 
