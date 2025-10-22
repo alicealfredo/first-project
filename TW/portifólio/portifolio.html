@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>o meu Portifólio</title>
+    <link rel="stylesheet" href="style03.css">
+</head>
+<body>
+    <section id="header">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#header">Início</a></li>
+                    <li><a href="#sobreMim">Sobre Mim</a></li>
+                    <li><a href="#meusProjetos">Os meus projetos</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                </ul>
+            </nav>
+            <h1 id="tituloPagina">O meu Portifólio</h1>
+        </header>
+    </section>
+    <main>
+        <section id="sobreMim">
+            <h2 class="subtitulos">Sobre Mim</h2>
+            <h3 class="subtitulos2">Alice Alfredo</h3>
+            <p class="textoSimples">Graphic Designer, com experiência em Photoshop, Illustrator e Figma.</p>
+        </section>
+        <section id="meusProjetos">
+            <h2 class="subtitulos">Os Meus Projetos</h2>
+            <div class="projetos" id="projeto01">
+                <h3 class="subtitulos2">✦ Cartaz 3 Dez</h3>
+                <p class="textoSimples">Cartaz feito para o dia Internacional das Pessoas com Deficiência.</p>
+                <br><img src="imagens/Cartaz3Dez_AliceAlfredo.jpg" alt="Imagem do cartaz" height="200px">
+            </div>
+            <div class="projetos" id="projeto02">
+                <h3 class="subtitulos2">✦ Identidade Visual</h3>
+                <p class="textoSimples">Identidade visual para uma loja de velas aromáticas.</p>
+                <br><img src="imagens/Magnolia_IDVisual.png" alt="Imagem da identidade visual" height="180px">
+            </div>
+        </section>
+        <section id="contactos">
+            <h2 class="subtitulos">Contactos</h2>
+            <fieldset>
+                <form>
+                    <p class="textoSimples">Nome:</p>
+                    <input class="introducaoTextual" type="text" required  placeholder="ex: Carolina Ferreira">
+                    <p class="textoSimples">Email:</p>
+                    <input class="introducaoTextual" type="text">
+                    <p class="textoSimples">Mensagem:</p>
+                    <textarea class="introducaoTextual" rows="10" cols="30"></textarea><br>
+                    <input id="botao" type="submit" value="Enviar Mensagem">
+                </form>
+            </fieldset>
+        </section>
+    </main>
+</body>
+</html>
