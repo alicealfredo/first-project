@@ -5,12 +5,12 @@ the triangle to be printed.
 """
 
 def triangle(number):
-    contador = 0
-    espacos = number
-    while contador <= number:
-        contador += 1
-        final = (" "*(espacos-(contador-1))) + (" *"*contador) 
-        print(final)
+    for i in range(0,number):
+        contador = 0
+        while contador <= number:
+            contador += 1
+            final = (" "*(number-(contador-1))) + (" *"*contador) 
+            print(final)
         break
 
 triangle(7)
