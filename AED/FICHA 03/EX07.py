@@ -19,9 +19,8 @@ def generatePassword(userName):
         password = ""
         
         for i in range(1, len(userName), 2): #percorre somente os caracteres pares
-            letras = userName[i]
             num = random.randint(1, 9)
-            password += letras + str(num)
+            password += userName[i] + str(num)
         
         password += str(len(userName))
     
