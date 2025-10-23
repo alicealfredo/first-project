@@ -10,6 +10,13 @@ def printCharLine(text,numberChar):
     for i in range(0, len(text), numberChar):
         print(text[i:i+numberChar])
 
+    """outra forma"""
+
+    while (len(text) > numberChar):
+        print(text[0:numberChar])
+        text = text[numberChar:]
+    print(text)
+
 text = str(input("Texto: "))
 numberChar = int(input("Nº caracteres a imprimir por linha: "))
 
