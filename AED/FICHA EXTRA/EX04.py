@@ -12,12 +12,6 @@ def geometricDiamond(number):
             contador += 1
             final1 = (" "*(number-(contador-1))) + (" *"*contador)
             print(final1)
-            continue
-        contador2 = number
-        while contador2 >= number:
-            contador2 -= 1
-            final2 = (" "*(number-(contador2-1))) + (" *"*contador2)
-            print(final2)
         break
 
 geometricDiamond(7)
