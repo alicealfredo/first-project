@@ -14,4 +14,4 @@ def triangle(number):
             print(final)
         break
 
-triangle(13)
+triangle(7)
