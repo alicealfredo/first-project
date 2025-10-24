@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     margin:0;
-    background-color: #E4F1E4;
+    background-color: #EDECE8;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 nav{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     left:0;
     display: flex;
+    color:#D2D0C6;
     justify-content: space-between;
-    background-color: #3B6064;
+    background-color: #4E5166;
 }
 nav ul{
     list-style: none;
@@ -18,19 +26,24 @@ nav ul{
     margin-right: 40px;
 }
 a{
-    color:#E4F1E4;
+    color:#D2D0C6;
     text-decoration: none;
 }
 a:hover{
-    color:#87BBA2;
+    color:#B5AA9D;
 }
-#blocoIntro{
-    color: #E4F1E4;
+.blocoIntro{
+    margin-top: 30px;
     height: 200px;
     padding: 10px;
-    background-color: #3B6064;
     background-image: url("https://images.unsplash.com/photo-1549918864-48ac978761a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070");
-    background-position: center -700px;
+    background-position: -170px 900px;
+    align-content: center;
+}
+#textIntro{
+    color: #3E4051;
+    display: flex;
+    justify-content: center;
 }
 @media screen and (max-width:768px){
     .menu{
@@ -38,21 +51,38 @@ a:hover{
     }
 }
 section>div{
+    margin: 30px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px;
-    gap: 10px;
+    grid-template-rows: auto;
+    gap: 40px;
 }
-.attraction{
-    background-color: white;
+.attraction img{
+    padding: 0px;
 }
-.attraction1{
+.item{
+    background-color: #DBE1E6;
+}
+.item:hover{
+    width: 103%;
+    height: 103%;
+}
+.textContainer{
+    padding: 10px;
+}
+.container1{
     grid-column: 1/2;
 }
-.attraction2{
+.container2{
     grid-column: 2/3;
 }
-.attraction3{
+.container3{
     grid-column: 3/4;
+}
+.title{
+    margin-left: 10px;
+}
+h3{
+    color:#747274;
 }
 
