@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Registo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row">
+            <div class="col-6 vh-100 bg-danger text-white">
+                <!-- Coluna esquerda -->
+                <h1>Bem-vindo ao nosso website</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="col-6 vh-100">
+                <!-- Coluna Direita -->
+                <h1 style="text-align:center">Login</h1>
+                <div class="mb-3">
+                <form>
+                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <label for="inputPassword5" class="form-label">Password</label>
+                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                    <br>
+                    <button type="submit" class="btn btn-danger">
+                        Login
+                    </button>
+                </form>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Registar
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Novo utilizador?👀</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <label for="inputPassword5" class="form-label">Password</label>
+                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                    <br>
+                    <div class="Subscription">
+                        <label class="form-label">Tipo de subscrição</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Basic 4.99€</option>
+                            <option value="1">Plus 9.99€</option>
+                            <option value="2">Premium 12.99€</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="genero">
+                        <label class="form-label">Gênero</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">
+                                Feminino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                            <label class="form-check-label" for="radioDefault2">
+                                Outro
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                        <label class="form-check-label" for="checkDefault">
+                            Ao continuar estará a aceitar os termos e condições
+                        </label>
+                    </div>
+                        <br>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Criar conta</button>
+                    </div>
+        </div>
+    </div>
+</body>
+</html>
