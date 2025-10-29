@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+body {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color:#A62A26;
+}
+.titulo{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 40px;
+}
+.container01{
+    padding: 10px;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://i.redd.it/1n4orl4c3bm41.png");
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: 0px -100px;
+}
