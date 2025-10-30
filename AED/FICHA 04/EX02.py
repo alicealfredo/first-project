@@ -29,6 +29,6 @@ def generateEuromillionKeys():
 generateEuromillionKeys()
 resposta = input("Deseja gerar uma nova chave? (S/N): ")
 
-while resposta != "N":
+while resposta.upper() == "S":
     generateEuromillionKeys()
     resposta = input("Deseja gerar uma nova chave? (S/N): ")
