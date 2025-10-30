@@ -19,17 +19,17 @@ ale = random.randint(1, 100)
 numerosGerados = []
 numerosGerados.append(ale)
 print(f"Número gerado: {ale}")
+
 resposta = input("Deseja gerar um novo número? (S/N): ")
+
 while resposta != "N":
-    if ale == 100:
-        break
-
-    novoAle = random.randint(ale + 1, 100)
-
-    while novoAle in numerosGerados:
+    while ale < 100:
         novoAle = random.randint(ale + 1, 100)
-    
-    numerosGerados.append(novoAle)
-    ale = novoAle
-    print(f"Número gerado: {novoAle}")
-    resposta = input("Deseja gerar um novo número? (S/N): ")
+
+        while novoAle in numerosGerados:
+            novoAle = random.randint(ale + 1, 100)
+        
+        numerosGerados.append(novoAle)
+        ale = novoAle
+        print(f"Número gerado: {novoAle}")
+        resposta = input("Deseja gerar um novo número? (S/N): ")
