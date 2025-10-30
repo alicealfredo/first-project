@@ -13,10 +13,15 @@ def generateEuromillionKeys():
     chaveEuro = []
     for i in range(5):
         ale1 = random.randint(1,50)
+        while ale1 in chaveEuro:
+            ale1 = random.randint(1,50)
         chaveEuro.append(ale1)
+        
     estrelas = []
     for j in range(2):
         ale2 = random.randint(1,12)
+        while ale2 in estrelas:
+            ale2 = random.randint(1,12)
         estrelas.append(ale2)
     
     print(f"Chave do Euromilhões: {chaveEuro}       Estrelas: {estrelas}")
