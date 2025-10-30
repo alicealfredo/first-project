@@ -18,9 +18,9 @@ import random
 ale = random.randint(1, 100)
 numerosGerados = []
 numerosGerados.append(ale)
-print(f"Número gerado: {ale}")
+print(f"Número sorteado: {ale}")
 
-resposta = input("Deseja gerar um novo número? (S/N): ")
+resposta = input("Quer gerar um novo número? (S/N): ")
 
 while resposta != "N":
     while ale < 100:
@@ -31,5 +31,5 @@ while resposta != "N":
         
         numerosGerados.append(novoAle)
         ale = novoAle
-        print(f"Número gerado: {novoAle}")
-        resposta = input("Deseja gerar um novo número? (S/N): ")
+        print(f"Número sorteado: {novoAle}")
+        resposta = input("Quer gerar um novo número? (S/N): ")
