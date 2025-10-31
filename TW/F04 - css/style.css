@@ -79,7 +79,7 @@ a:hover {
     transition: transform 0.3s;
 }
 .card:hover {
-    width: 105%;
+    width: 102%;
     height: 105%;
 }
 .card img {
