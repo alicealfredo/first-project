@@ -5,25 +5,61 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #3C1518;
+    background-color: #111;
     color: white;
 }
 a{
-    color: #EC1E24;
+    color: white;
     text-decoration: none;
 }
 a:hover{
-    color:#FFA987;
+    color:#EC1E24;
 }
 button {
-    background-color: #69140E;
+    background-color: #3C1518;
     margin-bottom: 1rem;
+    padding: 10px 20px;
+    font-size:18px;
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: #EC1E24;
+    margin-bottom: 1rem;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+button a:hover {
+    color: white;
 }
 nav {
     display: flex;
     justify-content: space-between;
     color: #F2F3AE;
     background-color: #111;
+}
+main p {
+    margin: 20px;
+}
+main h2 {
+    color: #EC1E24;
+    margin: 20px;
+}
+main h3 {
+    color: #F2F3AE;
+    margin: 20px;
+}
+form textarea {
+    margin-left: 20px;
+    margin-top: -10px;
+}
+form text {
+    margin-top: -10px;
+}
+#button {
+    margin: 20px;
 }
 nav ul{
     list-style: none;
