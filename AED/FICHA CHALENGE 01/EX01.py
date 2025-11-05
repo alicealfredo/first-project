@@ -17,11 +17,13 @@ import random
 def openSafe():
     correctPositions = 0
     for i in range(4):
-        if userGuess[i] == password[i]:
-            correctPositions += 1
-    return correctPositions
+        for position in userGuess:
+            if userGuess[i] == password[i]:
+                correctPositions += 1
+                correctPosition = userGuess[i]
+    return correctPositions, correctPosition
 
-# Senha aleatória de 4 dígitos
+# Senha aleatória de 4 dígitos 
 i = 0
 password = []
 while i < 4:
@@ -33,6 +35,7 @@ while i < 4:
 print("\n\t\t\t=== DIGITAL SAFE ===\t\t\t")
 print("\tTry to guess the SECRET CODE (4 numbers between 0 to 9)\t")
 print("\t\t\tYou have 10 attempts.\t\t\t\n")
+print(password)
 
 # Tentativas do utilizador para adivinhar a senha
 for t in range(10):
@@ -41,14 +44,14 @@ for t in range(10):
     for car in userInput.split():
         userGuess.append(int(car))
 
-    correctPositions = openSafe()
+    correctPositions, correctPosition = openSafe()
 
     # Imprime ao utilizador se há números corretos em cada posição
     if correctPositions == 4:
         print("Congratulations! The password is correct.")
         break
-    elif correctPositions > 0:
-        print(f"→ {correctPositions} correct and in the right position.")
+    elif correctPosition > 0:
+        print(f"→ {correctPosition} correct and in the right position.")
     else:
         print("→ No number is correct in the right position.")
 
