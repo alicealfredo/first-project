@@ -1,13 +1,15 @@
-let ale = Math.ceil(Math.random() * 10);
+let ale;
 let num = 0;
 let tent = 0;
 
 while(num!=ale) {
-    alert("Podes consultar na consola (DevTools) o número de tentativas necessárias");
-    num = +prompt("Escolha um número (de 1 a 10): ");
-    alert(ale);
+    ale = Math.ceil(Math.random() * 10);
+    num = +prompt("Escolha um número de 1 a 10:\n(Podes consultar na consola o número de tentativas necessárias)");
     tent++;
     console.log(`${tent}º tentativa - número gerado: ${ale}`);
+    if(num!=ale) {
+        alert("Não acertaste o número, tente novamente.");
+    }
 }
 
 if(tent==1) {
