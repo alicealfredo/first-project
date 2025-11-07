@@ -1,3 +1,8 @@
+// O objetivo é desenvolver um programa que desafie o utilizador a adivinhar um número aleatório
+// gerado pelo computador.
+// O número aleatório deve ser um valor entre 1 e 10, e o programa deve indicar se o utilizar acertou à
+// primeira, caso contrário, deve dizer quantas vezes seriam necessárias até sair o número escolhido.
+
 let ale;
 let num = 0;
 let tent = 0;
