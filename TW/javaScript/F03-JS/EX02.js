@@ -5,14 +5,14 @@ function avaliacao() {
     let ale = Math.ceil(Math.random() * 20);
     let resultado;
     if (ale<=9) {
-        resultado = "negativa";
+        resultado = "em Negativa";
     } else if (ale>9 && ale<=13) {
-        resultado = "tem de ir a Prova Oral";
+        resultado = "na necessidade de ir à Prova Oral";
     } else if (ale>13 && ale<=17) {
-        resultado = "positiva";
+        resultado = "em Positiva";
     } else if (ale>17 && ale<=20) {
-        resultado = "excelente";
+        resultado = "em Excelente";
     }
     
-    alert(`O estudante teve ${ale} valores, resultando em ${resultado}`);
+    alert(`O estudante teve ${ale} valores, resultando ${resultado}`);
 }

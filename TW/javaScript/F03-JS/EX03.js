@@ -1,7 +1,7 @@
 // Neste exercício deve-se contar as vogais presentes na frase fornecida pelo utilizador, através de ciclos e funções.
 
-let frase = prompt("Escreva uma frase:");
-let vogais = ["a","e","i","o","u"];
+let frase = (prompt("Escreva uma frase:")).toUpperCase();
+let vogais = ["A","E","I","O","U"];
 let contadorVogais = [];
 
 let i=0;
@@ -12,7 +12,7 @@ while (i<vogais.length) {
             contador++;
         }
     }
-    contadorVogais.push(`${vogais[i]}: ${contador}`)
+    contadorVogais.push(` ${vogais[i]}: ${contador}`)
     i++;
 }
 
