@@ -3,7 +3,11 @@
 
 let nome = prompt("Nome:");
 let apelido = prompt("Apelido:");
-let num = +prompt("Escolha um número entre 0 e 100:");
+let num;
+
+if(num<0 || num>100) {
+    num = +prompt("Escolha um número entre 0 e 100:")
+}
 
 nome = (nome[0]).toUpperCase() + nome.slice(1, 3)
 apelido = (apelido[0]).toUpperCase() + apelido.slice(1, 3)
