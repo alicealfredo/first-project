@@ -4,24 +4,20 @@
 let listaNum = [];
 let listaEst = [];
 
-while(listaNum.length<5) {
+while(listaNum.length <     5) {
     let ale = Math.ceil(Math.random() * 50);
-    for (let num in listaNum) {
-        if (num != ale) {
+    for(i = 0; i<listaNum.length; i++) {
+        if (listaNum[i]!=ale) {
             console.log(ale);
             listaNum.push(ale);
         }
     }
 }
 
-while(listaEst.length<2) {
-    let estrela = Math.ceil(Math.random() * 12);
-    for (let est in listaEst) {
-        if (est != estrela) {
-            console.log(estrela);
-            listaEst.push(est);
-        }
-    }
-}
+// while(listaEst.length<2) {
+//     let estrela = Math.ceil(Math.random() * 12);
+//     console.log(estrela);
+//     listaEst.push(estrela);
+// }
 
-alert(`- Chave do Euromilhões -\nNúmeros: ${listaNum}\nEstrelas: ${listaEst}`)
+alert(`- Chave do Euromilhões -\nNúmeros: ${listaNum.sort((a, b) => a - b)}`)
