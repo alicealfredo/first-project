@@ -60,8 +60,8 @@ while option != 0:
         carExit(filas)
     elif option == 3:
         print("Free places:")
-        print(f"Rows: {filas.count("in use")}")
-        print(f"Places: {filas.count("in use")}")
+        print(f"Rows: {filas.count('free')}")
+        print(f"Places: {filas.count('free')}")
         
     elif option == 0:
         break
