@@ -6,14 +6,19 @@ let listaEst = [];
 
 while(listaNum.length < 5) {
     let ale = Math.ceil(Math.random() * 50);
-    console.log(ale);
-    listaNum.push(ale);
+    if (listaNum.indexOf(ale) === -1) { // Se o valor não existir, retorna -1
+        console.log(ale);
+        listaNum.push(ale);
+    }
 }
 
 while(listaEst.length<2) {
     let est = Math.ceil(Math.random() * 12);
-    console.log(est);
-    listaEst.push(est);
+
+    if (listaEst.indexOf(est) === -1) { // Se o valor não existir, retorna -1
+        console.log(est);
+        listaEst.push(est);
+    }
 }
 
-alert(`- Chave do Euromilhões -\nNúmeros: ${listaNum.sort((a, b) => a - b)}`)
+alert(`- Chave do Euromilhões -\n Números: ${listaNum.sort((a, b) => a - b)}\n Estrelas: ${listaEst.sort((a, b) => a - b)}`)
