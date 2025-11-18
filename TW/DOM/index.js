@@ -1,5 +1,7 @@
 let pratosPrincipais = document.getElementsByTagName("li");
-console.log(pratosPrincipais);
+for (let i=0; i<pratosPrincipais.length; i++) {
+    console.log(pratosPrincipais[i]);
+}
 
 let btn = document.getElementsByTagName("button");
 btn[0].addEventListener("click", function(){
