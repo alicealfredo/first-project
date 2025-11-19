@@ -10,6 +10,4 @@ Colombia; América
 China; Asia
 Japão; Asia
 Tailandia; Asia
-Malásia; AsiaBrasilAmérica
-BrasilAmérica
-Brasil;América
+Malásia; Asia
