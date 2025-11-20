@@ -1,13 +1,13 @@
-Portual; Europa
-Espanha; Europa
-França; Europa
-Itália; Europa
-Suécia; Europa
-EUA; América
-Brasil; América
-Peru; América
-Colombia; América
-China; Asia
-Japão; Asia
-Tailandia; Asia
-Malásia; Asia
+Portugal;Europa
+Espanha;Europa
+França;Europa
+Itália;Europa
+Suécia;Europa
+EUA;América
+Brasil;América
+Peru;América
+Colombia;América
+China;Ásia
+Japão;Ásia
+Tailandia;Ásia
+Malásia;Ásia
