@@ -60,24 +60,24 @@ def showCountries():
     input()
 
 def consultaPorContinente():
-    cont = input("Indique o continente: ").strip()
+    cont = (input("Indique o continente: ")).strip()
 
     filePaises = open(fileName, "r", encoding="utf-8")
-    lista = filePaises.readlines()
+    listaPaises = filePaises.readlines()
     filePaises.close()
 
     print("\nPaís\t\tContinente")
     print("--------------------------------")
 
-    for linha in lista:
+    paisesContador = 0
+
+    for linha in listaPaises:
         linha = linha.strip()
         campos = linha.split(";")
-        paisesContador = 0
 
-        if campos[1]==paisesContador:
+        if cont == campos[1]:
             print(campos[0],"\t\t", campos[1])
             paisesContador += 1
-            continue
         
     if paisesContador == 0:
         print("Nenhum país encontrado.")
