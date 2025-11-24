@@ -3,6 +3,7 @@ Create an application that allows you to manage a country
 file (paises.txt), with a structure:
 country;continent
 """
+import os
 
 listaContinentes = ["Europa", "América", "África", "Ásia", "Oceania"]
 
@@ -10,22 +11,30 @@ filePath = "./files/"
 fileName = "paises.txt"
 fileName = filePath + fileName
 
-def paisExiste(pais):
-    filePaises = open(fileName, "r", encoding="utf-8")
-    listaPaises = filePaises.readlines()
-    filePaises.close()
+if not os.path.exists(filePath):
+    os.makedirs(filePath)
 
+# Função para verificar se o país já existe no ficheiro
+def paisExiste(pais):
+    try:
+        filePaises = open(fileName, "r", encoding="utf-8")
+        listaPaises = filePaises.readlines()
+    except Exception as e:
+        print("Erro ao abrir o ficheiro:", e)
+        input()
+        return True
+
+    finally:
+        filePaises.close()
+    
     for linha in listaPaises:
         campos = linha.strip().split(";")
         if campos[0].lower() == pais.lower():
             return True
+    
     return False
 
-def guardarFicheiro(pais, continente):
-    with open(fileName, "a", encoding="utf-8") as filePaises:
-        linha = pais + ";" + continente + "\n"
-        filePaises.write(linha)
-
+# Opção 1: Inserir países
 def addCountry():
     pais = input("País: ").strip()
     continente = input("Continente: ").strip()
@@ -44,6 +53,13 @@ def addCountry():
     print("País adicionado com sucesso! Prima <enter> para continuar...")
     input()
 
+# Função para guardar país no ficheiro
+def guardarFicheiro(pais, continente):
+    with open(fileName, "a", encoding="utf-8") as filePaises:
+        linha = pais + ";" + continente + "\n"
+        filePaises.write(linha)
+
+# Opção 2: Consulta países
 def showCountries():
     filePaises = open(fileName, "r", encoding="utf-8")
     lista = filePaises.readlines()
@@ -59,32 +75,31 @@ def showCountries():
     print("\nPrima <enter> para continuar...")
     input()
 
+# Opção 3: Consulta por continente
 def consultaPorContinente():
-    cont = (input("Indique o continente: ")).strip()
+    cont = input("Indique o continente: ").strip()
+    cont_normalizado = cont.capitalize()
 
     filePaises = open(fileName, "r", encoding="utf-8")
     listaPaises = filePaises.readlines()
     filePaises.close()
 
-    print("\nPaís\t\tContinente")
-    print("--------------------------------")
-
-    paisesContador = 0
-
-    for linha in listaPaises:
-        linha = linha.strip()
-        campos = linha.split(";")
-
-        if cont == campos[1]:
-            print(campos[0],"\t\t", campos[1])
-            paisesContador += 1
-        
-    if paisesContador == 0:
+    if cont_normalizado not in listaContinentes:
         print("Nenhum país encontrado.")
+        return
+    else:
+        print("\nPaís\t\tContinente")
+        print("--------------------------------")
+        for linha in listaPaises:
+            campos = linha.strip().split(";")
+
+            if cont.lower() == campos[1].lower():
+                print(campos[0], "\t\t", campos[1])
 
     print("\nPrima <enter> para continuar...")
     input()
 
+# Opção 4: Consulta nº países por continente
 def contaPaisesPorContinente():
     filePaises = open(fileName, "r", encoding="utf-8")
     lista = filePaises.readlines()
@@ -92,7 +107,7 @@ def contaPaisesPorContinente():
 
     continentes = []
     contagens = []
-
+    
     for linha in lista:
         pais, continente = linha.strip().split(";")
         
@@ -112,8 +127,9 @@ def contaPaisesPorContinente():
     input()
 
 #  MENU
-option = ""
+option = -1
 while option != 0:
+    os.system("clear")
     print("\n\n\tMENU")
     print("\t1 - Inserir países")
     print("\t2 - Consulta países")
@@ -130,3 +146,6 @@ while option != 0:
         consultaPorContinente()
     elif option == 4:
         contaPaisesPorContinente()
+    else:
+        print("Opção inválida. Prima <enter> para continuar...")
+        input()
