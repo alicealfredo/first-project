@@ -12,7 +12,8 @@ Função que escreve o texto num ficheiro binário
 """
 def writeText(text):
     with open(fileName, "wb") as file:
-        file.write(text.encode("utf-8"))  # Converte o texto para bytes
+        textBin = text.encode("utf-8")  # Converte o texto para bytes
+        file.write(textBin) 
 
     print("Texto gravado com sucesso em text.bin!")
 
@@ -43,7 +44,7 @@ while opcao != 0:
     opcao = int(input("Escolha uma opção: "))
 
     if opcao == 1:
-        texto = input("Texto:")
+        texto = input("Texto: ")
         writeText(texto)
 
     elif opcao == 2:
