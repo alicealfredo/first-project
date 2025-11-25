@@ -23,7 +23,6 @@ def paisExiste(pais):
         print("Erro ao abrir o ficheiro:", e)
         input()
         return True
-
     finally:
         filePaises.close()
     
