@@ -69,8 +69,13 @@ def showCountries():
     for linha in lista:
             linha = linha.strip()
             campos = linha.split(";")
-            print(campos[0],"\t\t", campos[1])
 
+            if len(campos[0]) < 8: #para ajustar o espaçamento e manter alinhados os continentes
+                print(campos[0] + "\t\t" + campos[1])
+            else:
+                print(campos[0] + "\t" + campos[1])
+
+                
     print("\nPrima <enter> para continuar...")
     input()
 
@@ -93,7 +98,11 @@ def consultaPorContinente():
             campos = linha.strip().split(";")
 
             if cont.lower() == campos[1].lower():
-                print(campos[0], "\t\t", campos[1])
+                
+                if len(campos[0]) < 8: #para ajustar o espaçamento e manter alinhados os continentes
+                    print(campos[0] + "\t\t" + campos[1])
+                else:
+                    print(campos[0] + "\t" + campos[1])
 
     print("\nPrima <enter> para continuar...")
     input()
