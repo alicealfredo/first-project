@@ -52,7 +52,7 @@ while opcao != 0:
         print("\nConteúdo do ficheiro:")
         print(conteudo)
 
-    elif opcao == "0":
+    elif opcao == 0:
         break
 
     else:
